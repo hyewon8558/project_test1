@@ -1,0 +1,8 @@
+h1{
+    padding: 10px;
+    /* 안여백 위아래좌우 10px */
+    background-color: #222;
+    color: #fff;
+    width: 150px;
+    text-align: center;
+    }
