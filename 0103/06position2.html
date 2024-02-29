@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        .box{
+            width: 150px;
+            height: 150px;
+        }
+        .box1{
+            position: static;
+            /* static 원래 상태 */
+            background-color: rgb(245, 127, 219);
+        }
+        .box2{
+            background-color: rgba(216, 91, 241, 0.877);
+        }
+        .box3{
+            position: relative;  /* relative 1. 기준 위치: 원래 컨텐츠 위치에서 이동한다 
+                                             2. 겹침: 다른 컨텐츠와 겹칠 수 있다*/
+            top: 50px;
+            left: 50px;
+            background-color: rgb(169, 79, 243);
+        }
+        .box4{
+            background-color: rgb(138, 57, 245);
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">박스1</div>
+    <div class="box box2">박스2</div>
+    <div class="box box3">박스3</div>
+    <div class="box box4">박스4</div>
+</body>
+</html>

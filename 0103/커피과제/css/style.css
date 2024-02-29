@@ -1,0 +1,85 @@
+*{margin: 0; padding: 0;}
+#container{
+    width: 1200px;
+    margin: 0 auto;
+}
+header{
+    position: relative;
+    height: 400px;
+    background: url(../images/top2.jpg) no-repeat center top;
+    background-size: cover;
+}
+header h1{
+    position: absolute;
+    right: 65px;
+    bottom: 70px;
+    font-size: 44px;
+    color: #fff;
+}
+nav{
+    height: 80px;
+    background-color: #2A1D0A;
+}
+nav ul{list-style: none;}
+nav ul li{
+    float: left;
+    margin: 20px 55px;
+}
+nav ul li a{
+    display: block;
+    width: 130px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+section{
+    width: 800px;
+    height: 800px;
+    background-color: #ccc;
+    float: left;
+}
+section h2{
+    text-align: center;
+    padding: 20px 0;
+}
+section article{
+    width: 340px;
+    height: 300px;
+    border: 1px solid #000;
+    background-color: #fff;
+    float: left;
+    margin: 0 0 20px 25px;
+    padding: 10px;
+}
+article h3{
+    padding: 5px 0 10px 30px;
+    background: url(../images/kong.png) no-repeat 5px 8px;
+}
+article p{
+    font-size: 20px;
+}
+aside{
+    width: 400px;
+    height: 800px;
+    background-color: #726054;
+    float: left;
+    text-align: center;
+}
+aside h2{
+    padding: 20px 0;
+}
+aside img{
+    width: 340px;
+    height: 210px;
+    margin-bottom: 15px;
+}
+footer{
+    clear: both;
+    height: 60px;
+    line-height: 60px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
