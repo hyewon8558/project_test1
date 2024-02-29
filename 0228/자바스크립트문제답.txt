@@ -1,0 +1,45 @@
+자바스크립트에서 변수를 선언하는 방법은?
+
+var myVariable = 10;
+
+자바스크립트에서 조건문을 작성하는 방법은?
+
+if (condition) {
+    // 조건이 참일 때 실행되는 코드
+} else {
+    // 조건이 거짓일 때 실행되는 코드
+}
+
+반복문을 사용하여 1부터 5까지 출력하는 자바스크립트 코드는?
+
+for (var i = 1; i <= 5; i++) {
+    console.log(i);
+}
+자바스크립트에서 배열을 선언하는 방법은?
+
+var myArray = [1, 2, 3, 4, 5];
+함수를 선언하는 자바스크립트 코드는?
+
+function myFunction(parameter) {
+    // 함수 내용
+}
+자바스크립트에서 객체를 선언하는 방법은?
+
+var myObject = { key1: 'value1', key2: 'value2' };
+콜백 함수가 무엇인가요?
+
+콜백 함수는 다른 함수의 인자로 전달되어 나중에 호출되는 함수를 의미합니다.
+null과 undefined의 차이점은 무엇인가요?
+
+null은 명시적으로 값이 없음을 나타내는데 사용되고, undefined는 값이 할당되지 않았음을 나타냅니다.
+이벤트 핸들러를 등록하는 방법은?
+
+
+document.getElementById('myButton').addEventListener('click', function() {
+    // 클릭 이벤트 처리
+});
+let과 const의 차이점은 무엇인가요?
+let은 변수를 선언할 때 사용되며, 값을 변경할 수 있습니다. const는 상수를 선언할 때 사용되며, 한 번 할당된 값은 변경할 수 없습니다.
+.
+this 키워드의 역할은 무엇인가요?
+this는 현재 실행 중인 코드에서 사용 중인 객체를 참조합니다.

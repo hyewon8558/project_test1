@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        // $.getJSON("demo_ajax_json.js", function(result){
+        //     $.each(result, function(i, field){
+        //         $("div").append(field + " ");
+        //     });
+        // });
+
+        // $.getJSON("날씨(파일)경로", function(data){
+        //     data 할일
+        // });
+        
+        $.getJSON("http://api.openweathermap.org/data/2.5/weather?id=1897007&appid=881b7275c8656a7edaedb86593ff6bef&units=metric", function(data){
+            // data에 http://api.openweathermap.org/data/2.5/weather?id=1897007&appid=881b7275c8656a7edaedb86593ff6bef&units=metric 의 내용이 저장됨
+            // alert(data.cod); : 200
+            // alert(data.city.name); : Hanam
+            // alert(data.list[0].main.temp); : list 아래 첫번째 main 아래 temp
+            // var $cTemp = data.list[0].main.temp;
+            // var $cLowTemp = data.list[0].main.temp_min;
+            // var $cHighTemp = data.list[0].main.temp_max;
+            // var $cDate = data.list[0].dt_txt; //날짜-시간
+            // var $cIcon = data.list[0].weather[0].icon;
+
+            // $('h2').prepend($cDate);
+
+            // $('.ctemp').append($cTemp);
+            // $('.clowtemp').append($cLowTemp);
+            // $('.chightemp').append($cHighTemp);
+
+            // $('.cicon').append($cIcon); → 04d 이런식으로 나옴
+            // 아이콘 그림이 나오게 하려면 어떻게 해야할까?
+
+            //$('.cicon').append('<img src = "https://openweathermap.org/img/wn/' + $cIcon + '@2x.png">');  2배크기
+            //$('.cicon').append('<img src = "https://openweathermap.org/img/wn/' + $cIcon + '.png">');  원래크기
+
+
+            // forecast 예보를 weather로 고치고
+            // 현재온도, 최고온도, 최저온도, 아이콘
+            // date() 메서드를 이용해서
+            // 2024/02/28 12:30
+
+            var $cTemp = data.main.temp;
+            var $cHTemp = data.main.temp_max;
+            var $cLTemp = data.main.temp_min;
+            var $cIcon = data.weather[0].icon;
+            
+            $('.ctemp').append($cTemp);
+            $('.clowtemp').append($cLTemp);
+            $('.chightemp').append($cHTemp);
+            // $('.cicon').append('<img src = "https://openweathermap.org/img/wn/' + $cIcon + '.png">');
+            $('.cicon').append(`<img src = "https://openweathermap.org/img/wn/${$cIcon}.png">`);
+
+            
+            // var $now = new Date();
+            // var $year = $now.getFullYear();
+            // var $month = $now.getMonth()+1;
+            // var $day = $now.getDate();
+            // var $hour = $now.getHours();
+            // var $min = $now.getMinutes();
+
+            // alert($min);
+
+            // $('h2').prepend($year + '/0' + $month + '/' + $day + ' ' + $hour + ':' + $min);
+
+            // $('h2').prepend($now.getFullYear() + '/' + ($now.getMonth()+1) + '/' + $now.getDate() + ' ' + $now.getHours() + ':' + $now.getMinutes());
+
+            
+            // var cDate = new Date().toLocaleDateString();
+
+            var $cDate = new Date().toLocaleString('ko-KR', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit'});
+            $('h2').prepend($cDate);
+            
+
+
+        });
+    </script>
+</head>
+<body>
+    <h1>weather api</h1>
+    <h2> - 날씨 예보</h2>
+    <div class="ctemp">현재 온도 : </div>
+    <div class="clowtemp">최저 온도 : </div>
+    <div class="chightemp">최고 온도 : </div>
+    <div class="cicon">아이콘 : </div>
+    <!-- <img src="https://openweathermap.org/img/wn/10d@2x.png" alt=""> -->
+</body>
+</html>

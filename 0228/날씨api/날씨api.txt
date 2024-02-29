@@ -1,0 +1,82 @@
+날씨 api
+
+사이트 : http://openweathermap.org/
+
+회원가입
+
+API keys 탭을 눌러서 key값을 복사
+
+내 API key : 881b7275c8656a7edaedb86593ff6bef
+
+아래쪽 중간에 how to start 누르면
+
+Example on how to make an API call using your API key 가 있음
+
+API call :
+
+http://api.openweathermap.org/data/2.5/forecast?id=524901&appid={API key}
+
+id 뒤에 있는 숫자는 도시코드
+
+적용하려는 도시 코드를 얻는 방법 :
+
+화면 좌측 상단 검색창 weather in your city에 도시 검색
+검색된 도시 클릭
+날씨 정보가 나옴
+
+주소창 맨 뒤에 나오는 숫자
+ex) https://openweathermap.org/city/1897007
+
+1897007 : 하남
+1835848 : 서울
+
+http://api.openweathermap.org/data/2.5/forecast?id=524901&appid={API key}를 수정하기
+
+http://api.openweathermap.org/data/2.5/forecast?id=1897007&appid=881b7275c8656a7edaedb86593ff6bef
+
+ : 하남의 날씨
+
+크롬에 JSON viewer 설치하면 보기 좋게 정리되어 나옴
+
+https://tools.arantius.com/tabifier 
+html , css , json //사이트정리
+
+var array = {1,2,3,4};
+
+array[0] = 1;
+
+var array1 = [{temp:value,temp_min:value},{temp:value,temp_min:value}]
+
+출력되어 나온 온도는 캘빈(kelvin)온도
+
+메뉴 - api - Units of measurement
+
+기본 : kelvin
+
+섭씨 : 뒤에 &units=metric 덧붙임
+
+화씨 : &units=imperial
+
+ex) http://api.openweathermap.org/data/2.5/forecast?id=1897007&appid=881b7275c8656a7edaedb86593ff6bef&units=metric
+
+forecast : 예보
+
+weather : 현재날씨
+
+ex) http://api.openweathermap.org/data/2.5/weather?id=1897007&appid=881b7275c8656a7edaedb86593ff6bef&units=metric
+
+
+날씨 아이콘
+https://openweathermap.org/weather-conditions
+
+How to get icon URL
+ex)
+For code 500 - light rain icon = "10d". See below a full list of codes
+URL is https://openweathermap.org/img/wn/10d@2x.png
+
+
+
+
+
+
+
